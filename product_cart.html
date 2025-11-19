@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Mandy Eats</title>
+    <link rel="stylesheet" href="mandy css/product_cart.css">
+</head>
+<body>
+    <header>
+        <h1>Mandy Eats</h1>
+        <nav>
+            <a href="mandy home.html"><img src="images/header/home.png" alt="home"height="50"width="50"></a>
+            <a href="about us.html"><img src="images/header/about us.png" alt="order"height="50"width="50"></a>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <p> please to order any of our Services, press the whatsapp button bellow were your order will be created and delivered <br> you can also talk to us and have more detailed information about us</p>  
+            <a href="https://wa.me/c/263786718014"> <img src="images/app.ico" alt="whatsapp button" height="70"width="70"></a>
+            <h3>we also do deliveries as long it is within Harare <br> we also offer catering services</h3>
+            <!--h2>Our Products</h2>
+            <div class="product-category">
+                <h3>Baked Products</h3>
+                <div class="product">
+                    <p>Chocolate Cake</p>
+                    <button class="add-to-cart" data-product="Chocolate Cake">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <p>Vanilla Cupcakes</p>
+                    <button class="add-to-cart" data-product="Vanilla Cupcakes">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-category">
+                <h3>Catering Services</h3>
+                <div class="product">
+                    <p>Wedding Catering</p>
+                    <button class="add-to-cart" data-product="Wedding Catering">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <p>Corporate Events</p>
+                    <button class="add-to-cart" data-product="Corporate Events">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-empty">Your cart is empty.</p>
+        </section>
+    </main-->
+
+    <footer>
+        <p>&copy; 2024 Mandy Eats. All Rights Reserved.</p>
+    </footer>
+    <!--script src="/mandy.Eats/mandy css/java s/product_cart.js"></script>
+
+    <!-- chat bot section -->
+    <!--div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="chatbot_section">
+                            <div class="main-heading text_align_left">
+                                <h2>Chat with Us!</h2>
+                            </div>
+                            <p>Have questions? Chat with our virtual assistant!</p>
+                            <div id="chatbox" style="border: 1px solid #ccc; padding: 20px; height: 300px; overflow-y: auto; background-color: #f9f9f9;">
+                                <div id="chat-log"></div>
+                            </div>
+                            <div class="input_section" style="margin-top: 20px;">
+                                <input type="text" id="user-input" placeholder="Type your message here..." style="width: calc(100% - 120px); padding: 10px;">
+                                <button id="send-button" style="padding: 10px; margin-left: 5px;">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+    <!--script-->>
+    <!--script>
+        // Function to append messages to the chat log
+        function appendMessage(author, message) {
+            const chatLog = document.getElementById("chat-log");
+            const messageDiv = document.createElement("div");
+    
+            // Apply a specific class depending on whether the message is from the user or the chatbot
+            if (author === "You") {
+                messageDiv.classList.add("user-message");
+            } else {
+                messageDiv.classList.add("chatbot-message");
+            }
+    
+            messageDiv.textContent = `${author}: ${message}`;
+            chatLog.appendChild(messageDiv);
+            chatLog.scrollTop = chatLog.scrollHeight; // Scroll to the bottom
+        }
+    
+        // Enhanced chatbot response function
+        function getChatbotResponse(userMessage) {
+            userMessage = userMessage.toLowerCase(); // Normalize the input
+    
+            if (userMessage.includes("hi") || userMessage.includes("hello")) {
+                return "Hello! How can I assist you today?";
+            } else if (userMessage.includes("products") || userMessage.includes("price")) {
+                return "white bread $0.90 : available "<br>"whole meal bread $0.90: available "<br>"brown bread $0.90 : available";
+            } else if (userMessage.includes("services")) {
+                return "We offer a variety of services including data recovery, computer repair, and network solutions. Would you like to know more about any specific service?";
+            } else if (userMessage.includes("hours") || userMessage.includes("open")) {
+                return "Our business hours are Monday to Friday, 9 AM to 5 PM. Feel free to visit us or contact us during those hours!";
+            } else if (userMessage.includes("location") || userMessage.includes("address")) {
+                return "We are located at 48 Auckland Road, Southerton, Harare. You can find us easily on the map!";
+            } else if (userMessage.includes("contact") || userMessage.includes("phone")) {
+                return "You can reach us at +263732001450 for any inquiries. We look forward to hearing from you!";
+            } else if (userMessage.includes("help") || userMessage.includes("support")) {
+                return "What kind of support do you need? I can assist with technical issues, service inquiries, and more.";
+            } else if (userMessage.includes("thank you") || userMessage.includes("thanks")) {
+                return "You're welcome! If you have any more questions, feel free to ask!";
+            } else {
+                return "I can't help you with this please contact our admin on 0786283248";
+            }
+        }
+    
+        // Handle the send button click event
+        document.getElementById("send-button").addEventListener("click", function() {
+            const userInput = document.getElementById("user-input").value;
+            if (userInput) {
+                appendMessage("You", userInput); // User's message goes to the right
+                const botResponse = getChatbotResponse(userInput);
+                appendMessage("lobels assistant", botResponse); // Chatbot's response goes to the left
+                document.getElementById("user-input").value = ""; // Clear the input
+            }
+        });
+    
+        // Allow sending messages with the Enter key
+        document.getElementById("user-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                document.getElementById("send-button").click();
+            }
+        });
+    </script>
+    <!--css script for chatbot-->>
+    <!--style>
+        /* Container for the chat */
+        #chat-log {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+    
+        /* User's messages align to the right */
+        .user-message {
+            text-align: right;
+            background-color: #def3de;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            max-width: 60%;
+            margin-left: auto;
+        }
+    
+        /* Chatbot's messages align to the left */
+        .chatbot-message {
+            text-align: left;
+            background-color: #dad2f0;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+    
+        /* Input field and send button */
+        #user-input {
+            width: 80%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #020202;
+            border-radius: 5px;
+        }
+    
+        #send-button {
+            padding: 10px;
+            background-color: #0996f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        #send-button:hover {
+            background-color: #151fac;
+        }
+    </style-->
+    
+</body>
+</html>
+

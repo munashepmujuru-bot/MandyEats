@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandy Eats</title>
+    <link rel="stylesheet" href="mandy css/home style.css">
+    <style>
+        /* Additional CSS for responsiveness and styling */
+        
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loader img {
+            width: 200px;
+            height: 100px;
+            animation: spin 2s linear infinite; /* Spin animation */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loaded .loader {
+            display: none;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <!--loading animation -->
+    <div class="loader">
+        <img src="images/header/loading.jpg" alt="Loading..."> 
+    </div>
+
+    <header>
+        <img src="images/header/logo.png" height="100"width="120">
+        <h1>Welcome to Mandy Eats</h1>
+        <nav>
+            <!--a href="mandy home.html">Home</a-->
+            <a href="mandy-cart.html"> </a>
+            <a href="about us.html"> <img src="images/header/about us.png" alt="order"height="50"width="50"></a>
+            <a href="product_cart.html"><img src="images/header/cart-order.png" alt="cart"height="50"width="50"></a>
+            
+
+        </nav>
+    </header>
+    <main>
+        <section class="cake-gallery">
+            <article class="cake-item">
+                <a href="product_cart.html"><img src="images/1.jpg" alt=""></a>
+                <h2>6 inch by 3 layers-$15</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html"> <img src="images/2.jpg" alt=""></a>
+                <h2>Carrot cake-$25</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html"> <img src="images/3.jpg" alt=""></a>
+                <h2>criss cross cake -$25</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html"> <img src="images/4.jpg" alt=""></a>
+                <h2>8 inch by 2 layers-$20</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html"> <img src="images/5.jpg" alt=""></a>
+                <h2>Kids choice -$30</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html"> <img src="images/6.jpg" alt=""></a>
+                <h2>Fruit cake -$20</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html">  <img src="images/7.jpg" alt=""></a>
+                <h2>Twin cake -$30</h2>
+            </article>
+            <article class="cake-item">
+                <a href="product_cart.html"> <img src="images/8.jpg" alt=""></a>
+                <h2>All occasion cake -$30</h2>
+                </article>
+                <article class="cake-item" >
+                    <a href="product_cart.html"> <img src="images/all.jpg" alt=""></a>
+                    <h2><b>Tell us what you want we can bake it</b></h2>
+                </article>
+                                                                                                                                                                                  </p>
+            
+            <!-- Add more cakes here -->
+        </section>
+    
+        
+    <style>
+        /* Center the heading */
+        h1 {
+            text-align: center;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+
+        /* Center the images and add spacing */
+        .image-container {
+            display: flex;
+            flex-direction: row; /* Display images side by side */
+            justify-content: center; /* Center images horizontally */
+            align-items: center; /* Center images vertically */
+            gap: 20px; /* Adds space between images */
+            margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping if images exceed container width */
+        }
+
+        /* Style for each image */
+        .image-container img {
+            width: 300px; /* Fixed width for consistency */
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures the image covers the area */
+            border: 5px solid #ddd; /* Adds a border */
+            border-radius: 10px; /* Rounded corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        .image-container img:hover {
+            transform: scale(1.05); /* Slightly zoom in */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow */
+            border-color: #ff6347; /* Changes border color on hover */
+        }
+    </style>
+
+    <h1><b>Catering Services</b></h1>
+    <div class="image-container">
+        <img src="images/catering/dish 1.jpg" alt="Dish 1">
+        <img src="images/catering/dish 2.jpg" alt="Dish 2">
+        <img src="images/catering/samusa.jpg" alt="Samusa">
+    </div>
+
+    <!--h1 style="text-align: center; font:bolder"><b>Catering services</b></h1>
+    <div class="image-container">
+        <img src="images/catering/dish 1.jpg" alt="1">
+        <img src="images/catering/dish 2.jpg" alt="2">
+        <img src="images/catering/samusa.jpg" alt="3">
+       
+    </div>
+    <style>
+
+       .image- container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       .image-container img{
+        width: 25%;
+        height: 50%;
+        margin-bottom: 30px;
+       }
+    </style-->
+    
+   
+    <!--footer>
+        <p>View our <a href="about us.html">About Us</a> page to know more about us <br> <b> we also do deliveries<b></p>
+        <p>&copy; 2024 Mendy Eats. All Rights Reserved.</p>
+       
+    </footer-->
+    <script>
+        // Simulate page loading
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded'); // Hide loader
+            }, 3000); // Adjust the timeout to match your actual loading time
+        });
+    </script> 
+    </main>
+ 
+</body>
+</html>

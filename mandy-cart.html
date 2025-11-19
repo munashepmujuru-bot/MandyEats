@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="mandy css/cart style.css">
+    <style>
+        
+        
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loader img {
+            width: 200px;
+            height: 100px;
+            animation: spin 2s linear infinite; /* Spin animation */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loaded .loader {
+            display: none;
+        }
+
+      
+    </style>
+</head>
+<body>
+     <!--loading animation -->
+     <div class="loader">
+        <img src="images/header/loading.jpg" alt="Loading..."> 
+    </div>
+
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    <main>
+        <section class="cart">
+           
+            <!--table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example row -->
+                    <!--tr>
+                        <td>Chocolate Cake</td>
+                        <td><input type="number" value="1" min="1"></td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                    <!-- Add more rows dynamically with JavaScript -->
+                <!--/tbody>
+            </table>
+            <div class="cart-summary">
+                <h2>Total: $20.00</h2>
+                <button class="checkout-btn">Checkout</button>
+            </div-->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mendy Eats. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Simulate page loading
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded'); // Hide loader
+            }, 3000); // Adjust the timeout to match your actual loading time
+        });
+    </script> 
+</body>
+</html>
