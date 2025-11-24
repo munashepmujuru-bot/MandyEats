@@ -1,0 +1,34 @@
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 1rem;
+    text-align: right;
+}
+
+.about h2 {
+    color: #ff6f61;
+    margin-bottom: 0.5rem;
+}
+
+.about p, .about ul {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.about ul {
+    padding-left: 20px;
+}
+
+.about ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
